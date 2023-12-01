@@ -106,7 +106,7 @@ header form,
 .pagename {
     padding: 0 20px;
     font-size: 1.4rem;
-    border-left: 1px solid var(--main-color);
+    /* border-left: 1px solid var(--main-color); */
     font-size: 500;
 }
 

@@ -7,9 +7,12 @@
     --orange-yellow-color: rgb(246, 144, 19);
 }
 
-.container {
-    /* font-family: var(--main-font); */
-    /* padding: 0 15px; */
+.container, .container-sm, .container-md, .container-xl {
+    font-size: 12px;
+}
+.container-xxl{
+    font-size: 14px;
+
 }
 
 html {
@@ -98,7 +101,7 @@ a {
 }
 
 .header-mobile__icon--camera {
-    left: 90%
+    left: 85%
 }
 
 .header-mobile input {
@@ -521,7 +524,7 @@ a {
     color: rgb(70, 69, 69);
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: 12px;
     align-items: center;
 }
 
@@ -654,11 +657,6 @@ footer {
         height: 34px;
     }
 
-    .header__btn--search {
-        opacity: 0.8;
-        background-color: var(--main-color);
-
-    }
 
     .icon--search {
         color: white;
@@ -685,7 +683,7 @@ footer {
     }
 
     .shopee-mall__header--desc {
-        font-size: 18px;
+        font-size: 15px;
         padding-top: 16px;
     }
 

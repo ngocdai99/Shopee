@@ -32,11 +32,14 @@
             color: white;
         }
 
-        .dayly-discover__img, .flash-sale__img {
+        .dayly-discover__img,
+        .flash-sale__img {
+            object-fit: cover;
             transition: transform 0.3s ease-in-out;
         }
 
-        .daily-discover--inner-card, .flash-sale__card {
+        .daily-discover--inner-card,
+        .flash-sale__card {
             overflow: hidden;
         }
 
@@ -186,11 +189,12 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
+                            <img src="img/banner-giangsinh2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
                             <img src="img/banner1.jpg" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/banner2.jpg" class="d-block w-100" alt="...">
-                        </div>
+
                         <div class="carousel-item">
                             <img src="img/banner3.jpg" class="d-block w-100" alt="...">
                         </div>
@@ -208,8 +212,8 @@
                 </div>
 
                 <div class="banner-top--PC">
-                    <img src="img/banner6.jpg" class="img-fluid" alt="...">
-                    <img src="img/banner7.jpg" class="img-fluid" alt="...">
+                    <img src="img/banner5.png" class="img-fluid" alt="...">
+                    <img src="img/banner-giangsinh.png" class="img-fluid" alt="...">
                 </div>
             </section>
 
@@ -218,27 +222,23 @@
                     <a href="#" class=""><i class="fa-solid fa-2x fa-qrcode "></i></a>
                 </div>
 
-                <div class="col-5 QR-mobile__shopee-pay">
-                    <p style="font-size: 13px; font-weight: 500;">
-                        <i class="fa-solid icon fa-sack-dollar" style="color: var(--main-color);"></i>
-                        Ví ShopeePay
-                    </p>
-                    <p>Giảm 80.000Đ - Liên kết Ví ShopeePay ngay!</p>
+                <div class="col-6 QR-mobile__shopee-pay">
+                    <i class="fa-solid icon fa-sack-dollar" style="color: var(--main-color);"></i>
+                    <b>Ví ShopeePay</b> <br>
+                    Giảm 80.000Đ - Liên kết Ví ShopeePay ngay!
                 </div>
 
-                <div class="col-5 QR-mobile__shoppee-xu">
-                    <p style="font-size: 13px; font-weight: 500;">
-                        <i class="fa-solid icon fa-coins" style="color: var(--main-color);"></i>
-                        100 Xu
-                    </p>
-                    <p style="flex-grow: 1;"> Nhấn để nhận Xu mỗi ngày!</p>
+                <div class="col-4 QR-mobile__shoppee-xu">
+                    <i class="fa-solid icon fa-coins" style="color: var(--main-color);"></i>
+                    <b>100 Xu</b> <br>
+                    Nhấn để nhận Xu mỗi ngày!
                 </div>
             </section>
 
             <section class="page-menu">
                 <a href="#" class="page-menu__item">
                     <div class="page-menu__item--wrap-icon">
-                        <i class="fa-solid fa-2x icon fa-bolt m-1" style="color: #ff8c00;"></i>
+                        <i class="fa-solid fa-2x icon fa-bolt pt-2" style="color: #ff8c00;"></i>
                     </div>
                     <p>Khung Giờ <br>Săn Sale</p>
                 </a>
@@ -252,7 +252,7 @@
 
                 <a href="#" class="page-menu__item">
                     <div class="page-menu__item--wrap-icon">
-                        <i class="fa-solid fa-2x pt-1 fa-shirt"></i>
+                        <i class="fa-solid fa-2x pt-2 fa-shirt"></i>
                     </div>
                     <p>Shopee <br> Thời Trang</p>
                 </a>
@@ -266,7 +266,7 @@
 
                 <a href="#" class="page-menu__item">
                     <div class="page-menu__item--wrap-icon">
-                        <i class="fa-solid fa-2x pt-1 fa-earth-americas" style="color: rgb(5, 169, 152);"></i>
+                        <i class="fa-solid fa-2x pt-2 fa-earth-americas" style="color: rgb(5, 169, 152);"></i>
                     </div>
                     <p>Hàng Quốc Tế</p>
                 </a>
@@ -280,7 +280,7 @@
 
                 <a href="#" class="page-menu__item">
                     <div class="page-menu__item--wrap-icon">
-                        <i class="fa-solid fa-2x pt-1 fa-fire-flame-curved"></i>
+                        <i class="fa-solid fa-2x pt-2 fa-fire-flame-curved"></i>
                     </div>
                     <p>Bắt Trend <br>- Giá Sốc</p>
                 </a>
@@ -296,14 +296,14 @@
 
                 <a href="#" class="page-menu__item">
                     <div class="page-menu__item--wrap-icon">
-                        <i class="fa-solid fa-2x mt-1 fa-mobile-screen" style="color: rgb(5, 169, 152);"></i>
+                        <i class="fa-solid fa-2x mt-2 fa-mobile-screen" style="color: rgb(5, 169, 152);"></i>
                     </div>
                     <p>Nạp Thẻ, <br>
                         Dịch Vụ & Data</p>
                 </a>
                 <a href="#mall" class="page-menu__item">
                     <div class="page-menu__item--wrap-icon">
-                        <img src="img/page-menu/shopee-mall.png" style="width: 90%; padding-top: 6px;" alt="...">
+                        <img src="img/page-menu/shopee-mall.png" style="width: 80%; padding-top: 5px;" alt="...">
 
 
                     </div>
@@ -311,6 +311,162 @@
                         Mall</p>
                 </a>
 
+
+
+
+            </section>
+
+            <section class="category">
+                <div class="category__header--name">
+
+                    <h5>DANH MỤC</h5>
+                </div>
+
+                <div class="category__list">
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate1.jpg" alt="">
+                        <p>
+                            Thời Trang Nam
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate2.jpg" alt="">
+                        <p>
+                            Điện Thoại & <br> Phụ Kiện
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate3.jpg" alt="">
+                        <p>
+                            Thiết Bị <br> Điện Tử
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate4.jpg" alt="">
+                        <p>
+                            Máy Tính & <br> Laptop
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate5.jpg" alt="">
+                        <p>
+                            Máy Ảnh & <br> Máy Quay Phim
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate6.jpg" alt="">
+                        <p>
+                            Đồng Hồ
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate7.jpg" alt="">
+                        <p>
+                            Giày Dép Nam
+                        </p>
+                    </a>
+
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate8.jpg" alt="">
+                        <p>
+                            Thiết Bị <br> Gia Dụng
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate9.jpg" alt="">
+                        <p>
+                            Thể Thao & <br> Du Lịch
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate10.jpg" alt="">
+                        <p>
+                            Ô Tô & <br> Xe Máy & <br>Du Lịch
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate11.jpg" alt="">
+                        <p>
+                            Thời Trang Nữ
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate12.jpg" alt="">
+                        <p>
+                            Mẹ Và Bé
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate13.jpg" alt="">
+                        <p>
+                            Nhà Cửa & <br> Đời Sống
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate14.jpg" alt="">
+                        <p>
+                            Sắc Đẹp
+                        </p>
+                    </a>
+
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate15.jpg" alt="">
+                        <p>
+                            Sức Khỏe
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate16.jpg" alt="">
+                        <p>
+                            Giày Dép Nữ
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate17.jpg" alt="">
+                        <p>
+                            Phụ Kiện & <br> Trang Sức Nữ
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate18.jpg" alt="">
+                        <p>
+                            Túi Ví Nữ
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate19.jpg" alt="">
+                        <p>
+                            Bách Hóa <br> Online
+                        </p>
+                    </a>
+
+                    <a href="#" class="category__link">
+                        <img src="img/category/cate20.jpg" alt="">
+                        <p>
+                            Nhà Sách <br> Online
+                        </p>
+                    </a>
+
+
+                </div>
 
 
 
@@ -533,7 +689,7 @@
                                 <img src="img/shope-mall/xiaomi.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/shope-mall/sale-cuoi-nam.jpg" class="d-block w-100" alt="...">
+                                <img src="img/shope-mall/banner-giangsinh.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
                                 <img src="img/shope-mall/sua-rua-mat.jpg" class="d-block w-100" alt="...">
@@ -742,7 +898,7 @@
                                 alt="...">
                             <div class="card-body daily-discover-card__body">
                                 <p class="dayly-discover-card__title">
-                                    Áo khoác gió nam CANIFA có mũ
+                                    Đầm Lovito dây kéo sau lưng có ren thêu hoa thanh lịch
                                 </p>
                                 <div class="daily-discover__mall-yeuthich">
                                     <img src="img/shopee-mall.png" class="dayly-discover__img--mall" alt="">
@@ -752,14 +908,14 @@
                                 <div class="dayly-discover__sale-desc">
 
                                     <p class="daily-discover__saleoff2">
-                                        Giảm đ200k
+                                        19% Giảm
                                     </p>
                                 </div>
 
                                 <div class="daily-discover-card__price">
-                                    <span style="font-size: 12px;">đ</span>299.000
+                                    <span style="font-size: 12px;">đ</span>179.000
                                     <p class="daily-discover-card__sold">
-                                        Đã bán 29
+                                        Đã bán 1.8k
                                     </p>
                                 </div>
 
@@ -768,7 +924,7 @@
                                 alt="">
                             <div class="daily-discover__saleoff" style="color: var(--main-color);">
                                 <i class="fa-solid fa-bolt"></i>
-                                -25%
+                                -48%
                             </div>
                         </div>
                         <a href="#" class="btn btn-danger dayly-discover__btn">
@@ -1688,7 +1844,7 @@
 
 
                 </div>
-                <ul class="pagination justify-content-center">
+                <!-- <ul class="pagination justify-content-center">
                     <li class="page-item disabled">
                         <a class="page-link">Previous</a>
                     </li>
@@ -1699,7 +1855,7 @@
                     <li class="page-item">
                         <a class="page-link" href="#">Next</a>
                     </li>
-                </ul>
+                </ul> -->
             </section>
 
 
@@ -1739,7 +1895,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="login.html">
                         <i class="fa-solid fa-2x fa-user"></i>
                         Tôi
                     </a>
@@ -1917,15 +2073,7 @@
             $(".add-cart--success").toggle("fast");
         });
 
-
-
-
-
     </script>
-
-
-
-
 
 
 </body>

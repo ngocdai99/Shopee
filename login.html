@@ -19,6 +19,7 @@
             --border-bottom-color: rgb(238, 238, 238);
         }
 
+
         a {
             text-decoration: none;
             cursor: pointer;
@@ -34,11 +35,37 @@
             font-size: 18px;
 
         }
+
+
+        @keyframes spin {
+            0% {
+                top: 20px;
+            }
+
+            25% {
+                top: 22px;
+            }
+
+            50% {
+                top: 30px;
+            }
+
+            75% {
+                top: 27px;
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+                top: 20px;
+            }
+        }
     </style>
 
 </head>
 
 <body>
+
     <div class="container container-sm container-xl container-md container-lg container-xxl">
         <header class="header">
             <a href="index.html">
@@ -49,7 +76,9 @@
         </header>
         <div class="body">
             <p class="h3 body__top">
-                <i class="fa-solid icon icon--arrow fa-arrow-left"></i>
+                <a href="index.html">
+                    <i class="fa-solid icon icon--arrow fa-arrow-left"></i>
+                </a>
                 Đăng nhập
                 <a href="index.html">
                     <i class="fa-solid icon icon--house-chimney fa-house-chimney-user"></i>
@@ -57,56 +86,60 @@
                 <i class="fa-regular icon icon--question fa-circle-question"></i>
             </p>
             <div class="body__desc">
+                <div class="orb"></div>
                 <p>
                     Nền tảng thương mại điện tử <br>
                     yêu thích ở Đông Nam Á & Đài Loan
                 </p>
 
             </div>
+            <section class="outer-orb">
+                <div class="orb-mobile">
+            </section>
 
-            <img src="img/logoShopee2.png" class="body-top__logo" alt="">
+       
+        <img src="img/logoShopee2.png" class="body-top__logo" alt="">
 
 
-            <div class="body__form">
-                <div class="body__QR">
-                    <p class="h6 p-3 body__QR--desc" style="background-color: rgb(255, 255, 255, 0.5);
+        <div class="body__form">
+            <div class="body__QR">
+                <p class="h6 p-3 body__QR--desc" style="background-color: rgb(255, 255, 255, 0.5);
                     color: #ffbf00; border: 1px solid #ffbf00 ;">Đăng nhập với mã QR</p>
-                    <a href="#"><i class="fa-solid fa-3x icon icon--QR fa-qrcode"></i></a>
-                </div>
-                <label for="body__input--username">
-                    <i class="fa-solid icon icon--user fa-user"></i>
-                    <input type="text" placeholder="Email/Số điện thoại/Tên đăng nhập" id="body__input--username">
-                </label>
-
-                <label for="body__input--password">
-                    <i class="fa-solid icon icon--lock fa-lock"></i>
-                    <input type="password" placeholder="Mật khẩu" id="body__input--password">
-                    <i class="fa-solid icon icon--eye fa-eye"></i>
-                </label>
-
-                <button><a href="#">Đăng nhập</a></button> <br>
-                <a href="#" style="color: #05a;">Quên mật khẩu?</a>
-                <a href="#" style="float: right; color: #05a;">Đăng nhập với SMS</a> <br>
-
-                <a class="body__MXH body__MXH--Google"
-                    style="color: black; background-color: rgb(255, 255, 255, 0.4); ">
-                    <img src="img/logoGoogle.png" class="body__MXH-img" alt="">
-                    Đăng nhập bằng Google</a>
-                <a class="body__MXH body__MXH--Facebook"
-                    style="color: black; background-color: rgb(255, 255, 255, 0.4);">
-                    <img src="img/logoFacebook.png" class="body__MXH-img" alt="">
-                    Đăng nhập bằng Facebook</a>
-                <p class="body__bottom" style="background-color: rgb(255, 255, 255, 0.4);">
-                    Bạn chưa tài khoản?
-                    <a href="#" style="color: var(--main-color); ">Đăng ký</a>
-                </p>
+                <a href="#"><i class="fa-solid fa-3x icon icon--QR fa-qrcode"></i></a>
             </div>
+            <label for="body__input--username">
+                <i class="fa-solid icon icon--user fa-user"></i>
+                <input type="text" placeholder="Email/Số điện thoại/Tên đăng nhập" id="body__input--username">
+            </label>
 
+            <label for="body__input--password">
+                <i class="fa-solid icon icon--lock fa-lock"></i>
+                <input type="password" placeholder="Mật khẩu" id="body__input--password">
+                <i class="fa-solid icon icon--eye fa-eye"></i>
+            </label>
+
+            <button><a href="#">Đăng nhập</a></button> <br>
+            <a href="#" style="color: #05a;">Quên mật khẩu?</a>
+            <a href="#" style="float: right; color: #05a;">Đăng nhập với SMS</a> <br>
+
+            <a class="body__MXH body__MXH--Google" style="color: black; background-color: rgb(255, 255, 255, 0.4); ">
+                <img src="img/logoGoogle.png" class="body__MXH-img" alt="">
+                Đăng nhập bằng Google</a>
+            <a class="body__MXH body__MXH--Facebook" style="color: black; background-color: rgb(255, 255, 255, 0.4);">
+                <img src="img/logoFacebook.png" class="body__MXH-img" alt="">
+                Đăng nhập bằng Facebook</a>
+            <p class="body__bottom" style="background-color: rgb(255, 255, 255, 0.4);">
+                Bạn chưa tài khoản?
+                <a href="#" style="color: var(--main-color); ">Đăng ký</a>
+            </p>
         </div>
 
 
+    </div>
 
-        <!-- <footer class="footer">
+
+
+    <!-- <footer class="footer">
             <table class="table table-striped">
 
                 <tr style="text-align: left;">

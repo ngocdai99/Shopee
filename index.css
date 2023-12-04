@@ -196,7 +196,8 @@ a {
 
 .flash-sale__product {
     display: flex;
-    overflow: hidden;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
 }
 
 .flash-sale__card {

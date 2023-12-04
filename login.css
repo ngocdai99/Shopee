@@ -3,9 +3,21 @@
     --border-bottom-color: rgb(238, 238, 238);
 }
 
+body {
+    background: url(img/backgroundLogin2.gif);
+    background-size: cover;
+}
+
+.container {
+    z-index: 2;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+
 header {
     display: none;
 }
+
 
 .body {
     position: relative;
@@ -43,10 +55,42 @@ header {
 
 }
 
+.outer-orb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55px;
+}
+
+.orb-mobile {
+    z-index: 0;
+    animation: spin 2s linear infinite;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+
+    /* border-radius: 50%; */
+    z-index: 0;
+    top: 0;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 60px orange,
+        inset -20px 0 60px rgb(233, 102, 55, 0.3),
+        inset 20px 0 300px rgb(233, 102, 55, 0.3),
+        inset -20px 0 300px rgb(233, 102, 55, 0.3),
+        0 0 50px #fff,
+        -10px 0 60px orange,
+        10px 0 60px rgb(233, 102, 55, 0.3);
+    
+}
+
 a {
     text-decoration: none;
 }
-
+.body__form{
+    padding-bottom: 2550px;
+}
 .icon {
     color: var(--main-color);
     cursor: pointer;
@@ -156,6 +200,7 @@ input {
     width: 80%;
     border: none;
     outline: none;
+    background-color: rgb(255, 255, 255, 0);
 }
 
 .body__MXH {
@@ -210,7 +255,15 @@ footer {
         justify-content: space-between;
         border-bottom: 1px solid gray;
     }
-    .body{
+
+    .outer-orb {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 90px;
+    }
+
+    .body {
         padding: 20px 0;
     }
 
@@ -242,7 +295,7 @@ footer {
 
     button {
         padding: 10px 0;
-        background-color: rgb(255, 191, 0, 0.1);
+        background-color: whitesmoke;
 
         border: 1px solid #ffbf00;
         transform: opacity 0.3 linear;
@@ -253,8 +306,33 @@ footer {
     }
 
     button a {
-        color: #ffbf00;
+        color: var(--main-color);
         font-weight: 500;
+    }
+
+    button::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: -2px;
+        top: -2px;
+        border-top: 4px solid #ffbf00;
+        border-left: 4px solid #ffbf00;
+        transition: all 0.5s ease;
+    }
+    
+    button::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -2px;
+        bottom: -2px;
+        border-bottom: 4px solid #ffbf00;
+        border-right: 4px solid #ffbf00;
+        transition: all 0.5s ease;
+    
     }
 
     .body__MXH {
@@ -418,6 +496,33 @@ footer {
         font-weight: bold;
         position: relative;
         text-align: center;
+        /* border: 1px solid red; */
+    }
+
+    .orb-mobile {
+        display: none;
+    }
+
+    .orb {
+        z-index: 1;
+        animation: spin 2s linear infinite;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 140px;
+        position: relative;
+        z-index: 0;
+        /* border-radius: 50%; */
+        box-shadow:
+            inset 0 0 50px #fff,
+            inset 20px 0 60px orange,
+            inset -20px 0 60px rgb(233, 102, 55, 0.3),
+            inset 20px 0 300px rgb(233, 102, 55, 0.3),
+            inset -20px 0 300px rgb(233, 102, 55, 0.3),
+            0 0 50px #fff,
+            -10px 0 60px orange,
+            10px 0 60px rgb(233, 102, 55, 0.3);
+
     }
 
     .body__desc p {
@@ -442,24 +547,29 @@ footer {
         border-top: 2px solid var(--main-color);
         background-color: rgb(255, 255, 255, 0.7);
 
-      
+
     }
-    footer table{
+
+    footer table {
         margin-bottom: 20px;
     }
 
-    footer i{
+    footer i {
         margin-right: 5px;
     }
-    footer a{
+
+    footer a {
         color: rgb(80, 78, 78);
         transform: all 0.3s ease;
-        
+
     }
-    footer a:hover{
+
+    footer a:hover {
         opacity: 0.8;
     }
-    table td, table td{
+
+    table td,
+    table td {
         text-align: left;
     }
 
@@ -472,6 +582,7 @@ footer {
     }
 
     .container {
+        z-index: 2;
         background-color: rgb(255, 255, 255, 0.7);
     }
 
@@ -481,7 +592,7 @@ footer {
         padding: 16px;
         width: 100%;
         text-align: center;
-       
+
     }
 
 }

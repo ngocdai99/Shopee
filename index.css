@@ -6,6 +6,9 @@
     --main-font: Helvetica, sans-serif;
     --orange-yellow-color: rgb(246, 144, 19);
 }
+.row{
+    gap: 10px;
+}
 
 .container,
 .container-sm,
@@ -140,6 +143,7 @@ a {
     padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
+    border-bottom: 1px solid var(--main-color);
 }
 
 .page-menu__item {
@@ -175,7 +179,8 @@ a {
 }
 
 .category {
-    display: none
+    display: none;
+    /* border-top: 1px solid var(--main-color); */
 }
 .carousel{
     cursor: pointer;
@@ -332,14 +337,14 @@ a {
     display: flex;
     flex-direction: column;
     border-top: 1px solid var(--main-color);
-    border-bottom: 1px solid var(--main-color);
+    /* border-bottom: 1px solid var(--main-color); */
     padding-bottom: 40px;
 }
 
 .daily-discover__header--name {
     color: var(--main-color);
     padding: 10px 0;
-    border-bottom: 1px solid rgb(230, 224, 224);
+    /* border-bottom: 1px solid rgb(230, 224, 224); */
 }
 
 .daily-discover__product {
@@ -793,7 +798,7 @@ footer {
     .pagination {
         display: flex;
         background-color: rgb(255, 255, 255, 0);
-        margin-top: 30px;
+        margin: 30px 0;
     }
 
     footer {

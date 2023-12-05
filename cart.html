@@ -124,7 +124,7 @@
 
 
             <!-- Product-->
-            <div class="shopname">
+            <div class="shopname" id="shopname1">
                 <input type="checkbox" class="input--checkbox">
                 <span class="yeuthich">Yêu thích+</span>
                 Giày Nam Nữ CHOOSE
@@ -132,7 +132,7 @@
                 <button class="shopname__btn--choose">Sửa</button>
             </div>
 
-            <div class="voucher-desc">
+            <div class="voucher-desc" id="voucher-desc1">
                 <span class="dealsoc">Deal Sốc</span>
                 Mua kèm deal độc quyền
                 <a class="p-1" style="color: var(--main-color);">
@@ -142,7 +142,7 @@
 
             </div>
 
-            <div class="product">
+            <div class="product" id="product1">
                 <div style="text-align: left;" class="col-lg-1 col-xl-1 col-xxl-1">
                     <input type="checkbox" class="input--checkbox">
                 </div>
@@ -175,7 +175,7 @@
                         style="text-align: center;color: var(--main-color); font-weight: bold;">
                         đ<span id="product__total--sp1">175000</span>
                     </div>
-                    <button class="btn--clear-product col-lg-1 col-xl-1 col-xxl-1">
+                    <button class="btn--clear-product col-lg-1 col-xl-1 col-xxl-1" id="btnXoa1">
                         Xóa
                     </button>
                 </div>
@@ -196,7 +196,7 @@
 
 
             <!-- Product-->
-            <div class="shopname">
+            <div class="shopname" id="shopname2">
                 <input type="checkbox" class="input--checkbox">
                 <span class="yeuthich bg-danger">Mall</span>
                 XƯỞNG NỘI THẤT HUYỀN BABY
@@ -204,7 +204,7 @@
                 <button class="shopname__btn--choose">Sửa</button>
             </div>
 
-            <div class="voucher-desc">
+            <div class="voucher-desc" id="voucher-desc2">
                 <span class="dealsoc">Deal Sốc</span>
                 Mua kèm deal độc quyền
                 <a class="p-1" style="color: var(--main-color);">
@@ -214,7 +214,7 @@
 
             </div>
 
-            <div class="product">
+            <div class="product" id="product2">
                 <div style="text-align: left;" class="col-lg-1 col-xl-1 col-xxl-1">
                     <input type="checkbox" class="input--checkbox">
                 </div>
@@ -223,7 +223,7 @@
                     <img src="img/flash-sale/ghe-van-phong.jpg" class="product__img col-lg-10 col-xl-10 col-xxl-10">
                 </div>
 
-                <div class="product__info col-lg-10 col-xl-10 col-xxl-10">
+                <div class="product__info col-lg-10 col-xl-10 col-xxl-10" id="product">
                     <div class="product__name col-lg-3 col-xl-3 col-xxl-3">
                         Ghế Văn Phòng Cao Cấp Massage Lưng
 
@@ -249,7 +249,7 @@
                         đ<span id="product__total--sp2">589000</span>
 
                     </div>
-                    <button class="btn--clear-product col-lg-1 col-xl-1 col-xxl-1">
+                    <button class="btn--clear-product col-lg-1 col-xl-1 col-xxl-1" id="btnXoa2">
                         Xóa
                     </button>
                 </div>
@@ -299,7 +299,7 @@
                         Tổng thanh toán
                         <span style="color: var(--main-color);font-weight: bold">đ</span><span
                             style="color: var(--main-color); font-weight: bold; font-size: 1.2rem;"
-                            id="tong-thanh-toan">100.000</span>
+                            id="tong-thanh-toan">764.000</span>
                     </div>
                     <button class="buy__btn">
                         Mua hàng
@@ -427,10 +427,10 @@
 
             let basic_price = parseInt($("#product__basic-price--sp2").text());
             $(".btn--plus").click(function () {
-                var inputElement = $("#product__quantity--input--sp2");
-                var currentValue = parseInt(inputElement.val());
+
+                var currentValue = parseInt($("#product__quantity--input--sp2").val());
                 if (!isNaN(currentValue)) {
-                    inputElement.val(currentValue + 1);
+                    $("#product__quantity--input--sp2").val(currentValue + 1);
                     $("#product__total--sp2").text(Number($("#product__total--sp2").text()) + basic_price);
                     $("#tong-thanh-toan").text((Number($("#product__total--sp2").text())) + (Number($("#product__total--sp1").text())));
                 }
@@ -439,18 +439,32 @@
             });
 
             $(".btn--minus").click(function () {
-                var inputElement = $("#product__quantity--input--sp2");
-                var currentValue = parseInt(inputElement.val());
+
+                var currentValue = parseInt($("#product__quantity--input--sp2").val());
                 if (!isNaN(currentValue) && currentValue > 0) {
-                    inputElement.val(currentValue - 1);
+                    $("#product__quantity--input--sp2").val(currentValue - 1);
                     $("#product__total--sp2").text(Number($("#product__total--sp2").text()) - basic_price);
                     $("#tong-thanh-toan").text((Number($("#product__total--sp2").text())) + (Number($("#product__total--sp1").text())));
-
-
-
                 }
 
             });
+
+            $("#btnXoa2").click(function () {
+                $("#shopname2").hide("fast");
+                $("#voucher-desc2").hide("fast");
+                $("#product2").hide("fast");
+                $("#tong-thanh-toan").text("0");
+            });
+
+            $("#btnXoa1").click(function () {
+                $("#shopname1").hide("fast");
+                $("#voucher-desc1").hide("fast");
+                $("#product1").hide("fast");
+                $("#tong-thanh-toan").text(Number($("#product__total--sp2").text()));
+            });
+
+
+
 
 
         });

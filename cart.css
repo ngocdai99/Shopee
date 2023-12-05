@@ -319,7 +319,8 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 995px) {
 
     body {
-        background: url(img/backgroundLogin2.gif);
+        background: linear-gradient(to bottom, orange, var(--shopee-mall-color));
+
         background-size: cover;
     }
 
@@ -531,6 +532,13 @@ footer {
         text-align: center;
     }
 
+    .product__name{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 4px;
+    }
+
     .product__info {
         display: flex;
         flex-direction: row;
@@ -632,8 +640,7 @@ footer {
    
 
     body {
-        background: url(img/backgroundLogin2.gif);
-        background-size: cover;
+        background: linear-gradient(to bottom, orange, orangered);
     }
 
     .row {
@@ -642,6 +649,8 @@ footer {
 
     .container {
         background-color: rgb(255, 255, 255, 0.7);
+        /* background: linear-gradient(to bottom, orange, orangered); */
+
     }
 
 }

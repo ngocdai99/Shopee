@@ -97,49 +97,52 @@
                 <div class="orb-mobile">
             </section>
 
-       
-        <img src="img/logoShopee2.png" class="body-top__logo" alt="">
+
+            <img src="img/logoShopee2.png" class="body-top__logo" alt="">
 
 
-        <div class="body__form">
-            <div class="body__QR">
-                <p class="h6 p-3 body__QR--desc" style="background-color: rgb(255, 255, 255, 0.5);
+            <div class="body__form">
+                <div class="body__QR">
+                    <p class="h6 p-3 body__QR--desc" style="background-color: rgb(255, 255, 255, 0.5);
                     color: #ffbf00; border: 1px solid #ffbf00 ;">Đăng nhập với mã QR</p>
-                <a href="#"><i class="fa-solid fa-3x icon icon--QR fa-qrcode"></i></a>
+                    <a href="#"><i class="fa-solid fa-3x icon icon--QR fa-qrcode"></i></a>
+                </div>
+                <label for="body__input--username">
+                    <i class="fa-solid icon icon--user fa-user"></i>
+                    <input type="text" placeholder="Email/Số điện thoại/Tên đăng nhập" id="body__input--username">
+                </label>
+
+                <label for="body__input--password">
+                    <i class="fa-solid icon icon--lock fa-lock"></i>
+                    <input type="password" placeholder="Mật khẩu" id="body__input--password">
+                    <i class="fa-solid icon icon--eye fa-eye"></i>
+                </label>
+
+                <button><a href="#">Đăng nhập</a></button> <br>
+                <a href="#" style="color: #05a;">Quên mật khẩu?</a>
+                <a href="#" style="float: right; color: #05a;">Đăng nhập với SMS</a> <br>
+
+                <a class="link__MXH">
+                    <img src="img/logoGoogle.png" alt="">
+                    <!-- <i class=" fa-brands fa-2x fa-google-plus-g"></i> -->
+                    Đăng nhập bằng Google</a>
+                <a class="link__MXH">
+                    <img src="img/logoFacebook.png" alt="" id="link__MXH--facebook">
+                    <!-- <i class="fa-brands fa-2x fa-facebook"></i> -->
+                    Đăng nhập bằng Facebook</a>
+                <p class="body__bottom" style="background-color: rgb(255, 255, 255, 0.4);">
+                    Bạn chưa tài khoản?
+                    <a href="#" style="color: var(--main-color); ">Đăng ký</a>
+                </p>
             </div>
-            <label for="body__input--username">
-                <i class="fa-solid icon icon--user fa-user"></i>
-                <input type="text" placeholder="Email/Số điện thoại/Tên đăng nhập" id="body__input--username">
-            </label>
 
-            <label for="body__input--password">
-                <i class="fa-solid icon icon--lock fa-lock"></i>
-                <input type="password" placeholder="Mật khẩu" id="body__input--password">
-                <i class="fa-solid icon icon--eye fa-eye"></i>
-            </label>
 
-            <button><a href="#">Đăng nhập</a></button> <br>
-            <a href="#" style="color: #05a;">Quên mật khẩu?</a>
-            <a href="#" style="float: right; color: #05a;">Đăng nhập với SMS</a> <br>
-
-            <a class="body__MXH body__MXH--Google" style="color: black; background-color: rgb(255, 255, 255, 0.4); ">
-                <img src="img/logoGoogle.png" class="body__MXH-img" alt="">
-                Đăng nhập bằng Google</a>
-            <a class="body__MXH body__MXH--Facebook" style="color: black; background-color: rgb(255, 255, 255, 0.4);">
-                <img src="img/logoFacebook.png" class="body__MXH-img" alt="">
-                Đăng nhập bằng Facebook</a>
-            <p class="body__bottom" style="background-color: rgb(255, 255, 255, 0.4);">
-                Bạn chưa tài khoản?
-                <a href="#" style="color: var(--main-color); ">Đăng ký</a>
-            </p>
         </div>
-
-
-    </div>
+       
 
 
 
-    <!-- <footer class="footer">
+        <!-- <footer class="footer">
             <table class="table table-striped">
 
                 <tr style="text-align: left;">
@@ -247,6 +250,7 @@
             </p>
         </footer> -->
     </div>
+    
 </body>
 
 </html>

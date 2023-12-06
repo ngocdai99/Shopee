@@ -99,6 +99,7 @@ a {
 
 .header-mobile__icon--search {
     left: 1%;
+    width: 20px;
 }
 
 .header-mobile input {

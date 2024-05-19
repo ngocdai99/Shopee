@@ -110,6 +110,7 @@ a {
     padding-top: 74px;
 }
 
+
 .banner-top--PC {
     display: none;
 }
@@ -779,16 +780,21 @@ footer {
         transform: translateY(-50%);
     }
 
-    .banner-top__carousel {
-        width: 66.66%;
-    }
+    
 
     .banner-top--PC {
         width: 33.33%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         gap: 3px;
+
+    }
+    #banner-top--slider {
+        max-width: 66.66%;
+    }
+    .banner-top--PC img{
+        height: 50%;
 
     }
 
@@ -845,7 +851,7 @@ footer {
 
 
     body {
-        background: linear-gradient(to bottom, orange, var(--shopee-mall-color));
+        background: white;
         background-size: cover;
     }
 

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Details</title>
+
+    <link rel="stylesheet" href="assets/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="assets/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="detail.css">
+    <!-- D:\BotFarHome\Cơ bản\Web\Responsive web\Code\Shopee\img -->
+    <style>
+        :root {
+            --main-color: #ee4d2d;
+            --border-color: rgb(238, 238, 238);
+            --yellow-color: #ffbf00;
+            --shopee-mall-color: #d0011b;
+        }
+
+        a {
+            text-decoration: none !important;
+            color: #05a;
+            cursor: pointer;
+        }
+
+        nav a {
+            color: white;
+        }
+
+        .zoomed {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- <audio src="Lovesong.MP3" autoplay></audio> -->
+    <div class="container container-sm container-md container-lg container-xl container-xxl container-fluid">
+
+
+        <div class="row">
+
+            <nav class="top-home-page">
+                <div class="nav-left">
+                    <a href="#" class="nav__link">Kênh Người Bán</a>
+                    <a href="#" class="nav__link">Tải Ứng Dụng</a>
+                    Kết Nối
+                    <a href="#" nav__link><i class="fa-brands icon icon--fb fa-facebook"></i></a>
+                    <a href="#" nav__link><i class="fa-brands icon icon--insta fa-instagram"></i></a>
+                </div>
+
+                <div class="nav-right">
+                    <a href="#" class="nav__link"><i class="fa-solid icon icon--bell fa-bell"></i>Thông Báo</a>
+                    <a href="#" class="nav__link">
+                        <i class="fa-regular icon icon--question fa-circle-question"></i>
+                        HỗTrợ
+                    </a>
+                    <li class="nav-item nav__link dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid icon fa-globe"></i>
+                            Tiếng Việt
+                        </a>
+                        <ul class="dropdown-menu mt-2 me-2 " style="border: 1px solid var(--main-color);">
+                            <li><a class="dropdown-item" href="#" style="color: var(--main-color);">Tiếng Việt</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: var(--main-color);">English</a></li>
+                        </ul>
+                    </li>
+                    <a href="register.html" class="nav__link">Profile</a>
+
+                </div>
+            </nav>
+
+            <div class="header-PC">
+                <nav class="navbar bg-body-tertiary header__nav--search">
+                    <div class="container-fluid">
+                        <a href="index.html" class="navbar-brand">
+                            <img src="img/shopeeMall_icon.png" alt="" class="page-logo">
+                        </a>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="TH True Mart giảm đến 22%"
+                                aria-label="Search">
+                            <button class="btn btn-outline-secondary header__btn--search" type="submit">
+                                <i class="fa-solid  icon icon--search fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </nav>
+                <a href="cart.html" class="header__icon--cart" style="display: flex;">
+                    <i class="fa-solid fa-2x icon  fa-cart-shopping"></i>
+                    (<span id="header__icon--cart--quantity" style="font-weight: bold;">0</span>)
+                </a>
+
+            </div>
+
+            <div class="header-mobile">
+                <nav class="navbar bg-body-tertiary">
+                    <form class="d-flex" role="search">
+                        <i class="fa-solid icon header-mobile__icon--search fa-magnifying-glass"></i>
+                        <input class="form-control bg-body-secondary me-2" type="search" placeholder="Nệm gấp gọn"
+                            aria-label="Search">
+                        <i class="fa-solid icon header-mobile__icon--camera fa-camera"></i>
+                    </form>
+                    <a href="cart.html">
+                        <i class="fa-solid fa-2x icon header-mobile__icon--cart fa-cart-shopping"></i>
+                    </a>
+                    <i class="fa-solid fa-2x icon header-mobile__icon--message fa-comment-dots"></i>
+
+                </nav>
+            </div>
+
+
+            <section id="detail-top">
+                <div id="detail-image" class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                    <img src="img/detail_img.jpg"  id="product_image">
+                    <div id="detail-top__share">
+                        <p>Chia sẻ</p>
+                        <a href="#"><i class="fa-brands fa-facebook-messenger" style="color: #0384ff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook" style="color: #3b5999;"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest" style="color: #de0217;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter" style="color: #10c2ff;"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="detail-top__info col-xxl-8 col-xl-8 col-lg-8 col-md-8">
+
+                    <div id="detail-top__name">
+                        <img src="img/shopee-mall.png">
+                        <p>Lovito Đầm ren xếp ly đơn giản giản dị dành cho nữ LNE55538</p>
+                    </div>
+
+                    <div id="detail-top__rating">
+                        <span id="rating" class="m-1">5.0</span>
+                        <div class="rating-star" aria-valuenow="5">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+
+                        </div>
+                        <p><span>2</span> Đánh Giá</p>
+                        <p><span>8</span> Đã bán</p>
+                    </div>
+
+                    <div id="detail-top__price">
+
+                        <p class="col-2">đ<span>226.000</span></p>
+                        <p>đ<span>127.000</span></p>
+                        <p><span>44</span>% GIẢM</p>
+
+                    </div>
+
+                    <div id="detail-top__voucher">
+                        <p class="col-2">Mã Giảm Giá Của Shop</p>
+                        <p><span>10</span>% GIẢM</p>
+                        <p><span>12</span>% GIẢM</p>
+                        <p><span>15</span>% GIẢM</p>
+                        <p><span>19</span>% GIẢM</p>
+
+                    </div>
+                    <div id="detail-top__transportation">
+                        <p class="col-2">Vận Chuyển</p>
+                        <img src="img/freeship.png" alt="">
+                        <p>Miễn phí vận chuyển</p>
+
+                    </div>
+                    <div id="detail-top__color">
+                        <p class="col-2">Màu Sắc</p>
+                        <img src="img/detail_img.jpg" alt="">
+                        <p>Trắng Nhạt</p>
+
+                    </div>
+                    <div id="detail-top__size">
+                        <p class="col-2">Kích Thước</p>
+
+                        <span>S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+
+                    </div>
+
+                    <div id="detail-top__quantity">
+                        <p class="col-2">Số Lượng</p>
+                        <button><i class="fa-solid fa-minus"></i></button>
+                        <input value="1"></input>
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <p class="col-5">17 sản phẩm có sẵn</p>
+                    </div>
+                    <div id="detail-top__buttons">
+
+                        <button><i class="fa-solid fa-cart-shopping"></i> Thêm Vào Giỏ Hàng</button>
+
+                        <button>Mua Ngay</button>
+
+                    </div>
+
+
+                    <div id="detail-top__policy">
+                        <p><i class="fa-solid fa-box-open" style="color: var(--shopee-mall-color);"></i>Đổi ý miễn phí
+                            15 ngày</p>
+                        <p><i class="fa-solid fa-shield" style="color:var(--shopee-mall-color);"></i>Hàng chính hãng
+                            100%</p>
+                        <p><i class="fa-solid fa-truck" style="color: var(--shopee-mall-color);"></i>Miễn phí vận chuyển
+                        </p>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </section>
+            <div id="detail-body">
+                <h2>CHI TIẾT SẢN PHẨM</h2>
+                <div class="detail-body_item">
+                    <span class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">Danh Mục:</span>
+                    <p> Shopee > Thời Trang Nữ > Đầm / Váy</p>
+                </div>
+                <div class="detail-body_item">
+                    <span class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">Thương Hiệu</span>
+                    <p>Lovito</p>
+                </div>
+                <div class="detail-body_item">
+                    <span class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">Chiều dài tay áo</span>
+                    <p>Tay Ngắn</p>
+                </div>
+                <div class="detail-body_item">
+                    <span class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">Rất lớn</span>
+                    <p>Không</p>
+                </div>
+                <div class="detail-body_item">
+                    <span class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">Mẫu</span>
+                    <p>Trơn</p>
+                </div>
+                <div class="detail-body_item">
+                    <span class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">Kiểu váy</span>
+                    <p>Chia</p>
+                </div>
+                <div class="detail-body_item">
+                    <span class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2 col-xxl-2">Cổ áo</span>
+                    <p>Người yêu</p>
+               
+       
+            </div>
+
+            <ul class="nav nav-underline bottom-menu-mobile">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" style="color: #ee4d2d;">
+                        <i class="fa-solid fa-2x fa-house"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mall">
+                        <i class="fa-solid fa-2x fa-bag-shopping"></i>
+                        Mall
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-solid fa-2x fa-video"></i>
+                        Live
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-solid fa-2x fa-play"></i>
+                        Video
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa-solid fa-2x fa-bell"></i>
+                        Thông báo
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <i class="fa-solid fa-2x fa-user"></i>
+                        Tôi
+                    </a>
+                </li>
+
+            </ul>
+
+
+
+            <footer class="footer">
+                <table class="table table-striped">
+
+                    <tr style="text-align: left;">
+                        <th>CHĂM SÓC KHÁCH HÀNG</th>
+                        <th>VỀ SHOPEE</th>
+                        <th>THANH TOÁN</th>
+                        <th>THEO DÕI CHÚNG TÔI TRÊN</th>
+                        <th style="text-align: center;">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</th>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Trung Tâm Trợ Giúp</a></td>
+                        <td><a href="#">Giới Thiệu Về Shopee Việt Nam</a></td>
+                        <td rowspan="5" style="text-align: center;">
+
+                            <img src="img/visa.png" alt="" class="img-thumbnail">
+                            <img src="img/mastercard.png" alt="" class="img-thumbnail">
+                            <img src="img/shopeepay.png" alt="" class="img-thumbnail"> <br>
+                            <img src="img/jcb.png" alt="" class="img-thumbnail">
+                            <img src="img/tragop0.png" alt="" class="img-thumbnail">
+                            <img src="img/american-express.png" alt="" class="img-thumbnail">
+                        </td>
+                        <td><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></td>
+                        <td rowspan="11" style="text-align: center;">
+                            <img src="img/QR.png" alt="" class="img-thumbnail"> <br>
+                            <img src="img/appstore.png" alt="" class="img-thumbnail"> <br>
+                            <img src="img/googleplay.png" alt="" class="img-thumbnail"> <br>
+                            <img src="img/appgalerry.png" alt="" class="img-thumbnail">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Shopee Blog</a></td>
+                        <td><a href="#">Tuyển Dụng</a></td>
+                        <td><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Shopee Mall</a></td>
+                        <td><a href="#">Điều Khoản Shopee</a></td>
+                        <td><a href="#"><i class="fa-brands fa-linkedin"></i>Linkedln</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Hướng Dẫn Mua Hàng</a></td>
+                        <td><a href="#">Chính sách Bảo Mật</a></td>
+                        <td rowspan="8"></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Hướng Dẫn Bán Hàng</a< /td>
+                        <td><a href="#">Kênh Người Bán</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Thanh Toán</a></td>
+                        <td><a href="#">Flash Sales</a></td>
+                        <td rowspan="6" style="text-align: center;">
+                            <img src="img/shopee-express.png" alt="" class="img-thumbnail">
+                            <img src="img/ninjavan.png" alt="" class="img-thumbnail">
+                            <img src="img/vietnampost.png" alt="" class="img-thumbnail"><br>
+                            <img src="img/viettelpost.png" alt="" class="img-thumbnail">
+                            <img src="img/ahamove.png" alt="" class="img-thumbnail">
+                            <img src="img/J&TExpress.png" alt="" class="img-thumbnail"><br>
+                            <img src="img/Grab-express.png" alt="" class="img-thumbnail">
+                            <img src="img/be.png" alt="" class="img-thumbnail">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Shopee Xu</a></td>
+                        <td><a href="#">Chương Trình Tiếp Thị Liên Kết Shopee</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Vận Chuyển</a></td>
+                        <td><a href="#">Liên Hệ Với Truyền Thông</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Trả Hàng & Hoàn Tiền</a></td>
+                        <td><a href="#">Chính Hãng</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Chăm Sóc Khách Hàng</a></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#">Chính Sách Bảo Hành</a></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+                <p class="h6"> Công ty TNHH Shopee</p>
+
+                <p>
+                    Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba
+                    Đình, Thành phố Hà Nội, Việt Nam. <br>
+                    Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn <br>
+                    Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678) <br>
+                    Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015 <br>
+                    © 2015 - Bản quyền thuộc về Công ty TNHH Shopee
+                </p>
+            </footer>
+        </div>
+
+
+    </div>
+
+    
+
+</body>
+
+</html>

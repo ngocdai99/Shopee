@@ -11,7 +11,7 @@ body {
 .container {
     z-index: 2;
     background-color: rgb(255, 255, 255, 0.7);
-    position: fixed;
+    
 }
 
 
@@ -24,37 +24,6 @@ header {
     position: relative;
 }
 
-.body__QR {
-    display: flex;
-    /* border: 1px solid red; */
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.body__QR--desc {
-    position: relative;
-    padding: 10px;
-}
-
-.body__QR--desc::after {
-    position: absolute;
-    content: "";
-    width: 0.75rem;
-    height: 0.75rem;
-    transform: rotate(45deg) translateX(-50%);
-    border-top: 2px solid #ffbf00;
-    border-right: 2px solid #ffbf00;
-    top: 50%;
-    right: -0.75rem;
-    background-color: rgb(255, 255, 255, 0.7);
-}
-
-.icon--QR {
-    display: block;
-    margin-left: 30px;
-
-}
 
 .outer-orb {
     position: absolute;
@@ -251,6 +220,10 @@ footer {
 
 
 @media screen and (min-width: 575px) and (max-width: 991px) {
+    .container{
+        height: 900px;
+        position: relative;
+    }
     header {
         display: block;
         height: 84px;
@@ -339,6 +312,9 @@ footer {
         transition: all 0.5s ease;
 
     }
+    .body__form{
+        flex-grow: 1;
+    }
 
     .body__MXH {
         padding: 16px 0;
@@ -349,7 +325,9 @@ footer {
     }
 
     .body__bottom {
+        /* position: fixed; */
         position: relative;
+        bottom: 0;
         padding: 16px 0;
     }
 
@@ -366,7 +344,7 @@ footer {
 @media screen and (min-width: 992px) {
     .container {
         position: relative;
-        height: 900px;
+        min-height: 920px;
     }
 
     header {
@@ -497,7 +475,7 @@ footer {
     .body__desc {
         width: 40%;
         display: block;
-        bottom: 8%;
+        /* bottom: 8%; */
         color: var(--main-color);
         font-weight: bold;
         position: relative;
@@ -515,7 +493,7 @@ footer {
         width: 200px;
         height: 200px;
         margin: 0 auto;
-        margin-top: 115px;
+        margin-top: 65px;
         position: relative;
         top: -20px;
         z-index: 0;

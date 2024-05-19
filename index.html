@@ -775,7 +775,7 @@
 
 
                     <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1"
-                        id="daily-discover-card-1" onclick="window.location.href='detail.html';">
+                        id="daily-discover-card-1" >
                         <div class="daily-discover--inner-card">
 
                             <img src="img/daily-discover/sanpham13.jpg" class="card-img-top dayly-discover__img"
@@ -2042,7 +2042,7 @@
                 sliderArray[i] = new Image();
                 sliderArray[i].src = `img/banner${i}.jpg`;
 
-                console.log(sliderArray[i]);
+                // console.log(sliderArray[i]);
             }
         }
 
@@ -2060,22 +2060,32 @@
 
         var dailyDiscoverCardList = document.getElementsByClassName('dayly-discover-card');
         Array.from(dailyDiscoverCardList).forEach(function (element) {
+            
             element.onmouseenter = function () {
-                element.querySelector('.dayly-discover__img').classList.add('zoomed')
+                element.firstElementChild.firstElementChild.classList.add('zoomed')
             }
             element.onmouseleave = function () {
-                element.firstElementChild.firstElementChild.classList.remove('zoomed')
+                element.querySelector('.dayly-discover__img').classList.remove('zoomed')
             }
-            element.querySelector('.dayly-discover__img').addEventListener('click', function () {
+            
+        })
+
+        var dailyDiscoverCardBodyList = document.getElementsByClassName('daily-discover-card__body');
+        // console.log(dailyDiscoverImageList);
+        Array.from(dailyDiscoverCardBodyList).forEach(function(element){
+
+            
+            element.addEventListener('click', function (event) {
+                // event.preventDefault();
                 window.location.href = 'detail.html';
             })
         })
 
 
             var flashSaleCardList = document.getElementsByClassName('flash-sale__card');
-            console.log(flashSaleCardList);
+            // console.log(flashSaleCardList);
             Array.from(flashSaleCardList).forEach(function (element) {
-                console.log(element.firstElementChild);
+                // console.log(element.firstElementChild);
                 element.addEventListener('mouseenter', function () {
                     element.querySelector('.flash-sale__img').classList.add('zoomed');
                 })

@@ -2066,7 +2066,7 @@
             element.onmouseleave = function () {
                 element.firstElementChild.firstElementChild.classList.remove('zoomed')
             }
-            element.addEventListener('click', function () {
+            element.querySelector('.dayly-discover__img').addEventListener('click', function () {
                 window.location.href = 'detail.html';
             })
         })

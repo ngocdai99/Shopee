@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee</title>
 
-    <link rel="stylesheet" href="assets/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="assets/jquery-3.7.1.min.js"></script>
-    <script src="assets/bootstrap.bundle.js"></script>
+   
+   
     <link rel="stylesheet" href="index.css">
 
     <style>
@@ -46,6 +46,7 @@
         .zoomed {
             transform: scale(1.03);
         }
+       
 
         .add-cart--success {
             top: 40vh;
@@ -83,7 +84,7 @@
     </style>
 </head>
 
-<body onload="loadSlider()">
+<body>
 
     <div class="add-cart--success">
         <i class="fa-solid fa-2x icon add-cart--success__icon fa-circle-check"></i>
@@ -178,8 +179,13 @@
 
 
             <section class="banner-top">
+                <div id="banner-top-sliderOuter">
+                    <img src="img/banner1.jpg" class="d-block w-100" alt="..." id="banner-top--slider">
+                    <i class="fa-solid fa-2x fa-chevron-left" id="banner-top--iconBack"></i>
+                    <i class="fa-solid fa-2x fa-chevron-right" id="banner-top--iconNext"></i>
+                </div>
 
-                <img src="img/banner1.jpg" class="d-block w-100" alt="..." id="banner-top--slider">
+
 
                 <div class="banner-top--PC">
                     <img src="img/banner4.jpg" class="img-fluid" alt="...">
@@ -280,492 +286,8 @@
                     <p>Shopee
                         Mall</p>
                 </a>
-
-
-
-
             </section>
-
-            <section class="category">
-                <div class="category__header--name">
-
-                    <h5>DANH MỤC</h5>
-                </div>
-
-                <div class="category__list">
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate1.jpg" alt="">
-                        <p>
-                            Thời Trang Nam
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate2.jpg" alt="">
-                        <p>
-                            Điện Thoại & <br> Phụ Kiện
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate3.jpg" alt="">
-                        <p>
-                            Thiết Bị <br> Điện Tử
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate4.jpg" alt="">
-                        <p>
-                            Máy Tính & <br> Laptop
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate5.jpg" alt="">
-                        <p>
-                            Máy Ảnh & <br> Máy Quay Phim
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate6.jpg" alt="">
-                        <p>
-                            Đồng Hồ
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate7.jpg" alt="">
-                        <p>
-                            Giày Dép Nam
-                        </p>
-                    </a>
-
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate8.jpg" alt="">
-                        <p>
-                            Thiết Bị <br> Gia Dụng
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate9.jpg" alt="">
-                        <p>
-                            Thể Thao & <br> Du Lịch
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate10.jpg" alt="">
-                        <p>
-                            Ô Tô & <br> Xe Máy & <br>Du Lịch
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate11.jpg" alt="">
-                        <p>
-                            Thời Trang Nữ
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate12.jpg" alt="">
-                        <p>
-                            Mẹ Và Bé
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate13.jpg" alt="">
-                        <p>
-                            Nhà Cửa & <br> Đời Sống
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate14.jpg" alt="">
-                        <p>
-                            Sắc Đẹp
-                        </p>
-                    </a>
-
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate15.jpg" alt="">
-                        <p>
-                            Sức Khỏe
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate16.jpg" alt="">
-                        <p>
-                            Giày Dép Nữ
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate17.jpg" alt="">
-                        <p>
-                            Phụ Kiện & <br> Trang Sức Nữ
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate18.jpg" alt="">
-                        <p>
-                            Túi Ví Nữ
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate19.jpg" alt="">
-                        <p>
-                            Bách Hóa <br> Online
-                        </p>
-                    </a>
-
-                    <a href="#" class="category__link">
-                        <img src="img/category/cate20.jpg" alt="">
-                        <p>
-                            Nhà Sách <br> Online
-                        </p>
-                    </a>
-
-
-                </div>
-
-
-
-            </section>
-
-            <section class="banner-body">
-                <a href="#">
-                    <img src="img/banner7.jpg" class="img-fluid" alt="...">
-                </a>
-            </section>
-
-            <section class="flash-sale">
-                <div class="flash-sale__header" style="display: flex;">
-                    <h5 style="color: #ee4d2d; padding: 5px;">
-                        F<i class="fa-solid fa-bolt fa-xs"></i>ASH SALE
-                    </h5>
-                    <div class="clock" id="clock" style="font-weight: bold;">12:00:00</div>
-                    <a href="#" class="link--xemthem">
-                        Xem thêm
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="flash-sale__product">
-
-                    <div class="card flash-sale__card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <img src="img/flash-sale/noi-ap-suat.jpg" class="card-img-top flash-sale__img" alt="...">
-                        <div class="card-body" style="width: 80%;">
-                            <h4 class="card-title" style="color: #ee4d2d;">
-                                <span style="font-size: 14px;">đ</span>79.000
-                            </h4>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    style="width: 25%"></div>
-                            </div>
-                        </div>
-
-                        <img src="img/shopee-mall.png" class="flash-sale__img--mall" alt="">
-
-                        <img src="img/flash-sale/12-12-dong-kiem.png" class="flash-sale__img--12-dongkiem" alt="">
-                        <div class="flash-sale__saleoff" style="color: var(--main-color);">
-                            <i class="fa-solid fa-bolt"></i>
-                            -48%
-                        </div>
-                    </div>
-
-                    <div class="card flash-sale__card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <img src="img/flash-sale/ghe-van-phong.jpg" class="card-img-top flash-sale__img" alt="...">
-                        <div class="card-body" style="width: 80%;">
-                            <h4 class="card-title" style="color: #ee4d2d;">
-                                <span style="font-size: 14px;">đ</span>579.000
-                            </h4>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    style="width: 45%"></div>
-                            </div>
-                        </div>
-
-                        <img src="img/shopee-mall.png" class="flash-sale__img--mall" alt="">
-
-                        <img src="img/flash-sale/12-12-dong-kiem.png" class="flash-sale__img--12-dongkiem" alt="">
-                        <div class="flash-sale__saleoff" style="color: var(--main-color);">
-                            <i class="fa-solid fa-bolt"></i>
-                            -48%
-                        </div>
-                    </div>
-
-                    <div class="card flash-sale__card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <img src="img/flash-sale/sandan.jpg" class="card-img-top flash-sale__img" alt="...">
-                        <div class="card-body" style="width: 80%;">
-                            <h4 class="card-title" style="color: #ee4d2d;">
-                                <span style="font-size: 14px;">đ</span>209.000
-                            </h4>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    style="width: 55%"></div>
-                            </div>
-                        </div>
-
-                        <img src="img/shopee-mall.png" class="flash-sale__img--mall" alt="">
-
-                        <img src="img/flash-sale/12-12-dong-kiem.png" class="flash-sale__img--12-dongkiem" alt="">
-                        <div class="flash-sale__saleoff" style="color: var(--main-color);">
-                            <i class="fa-solid fa-bolt"></i>
-                            -48%
-                        </div>
-                    </div>
-
-                    <div class="card flash-sale__card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <img src="img/flash-sale/dior.jpg" class="card-img-top flash-sale__img" alt="...">
-                        <div class="card-body" style="width: 80%;">
-                            <h4 class="card-title" style="color: #ee4d2d;">
-                                <span style="font-size: 14px;">đ</span>129.000
-                            </h4>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    style="width: 35%"></div>
-                            </div>
-                        </div>
-
-                        <img src="img/shopee-mall.png" class="flash-sale__img--mall" alt="">
-
-                        <img src="img/flash-sale/12-12-dong-kiem.png" class="flash-sale__img--12-dongkiem" alt="">
-                        <div class="flash-sale__saleoff" style="color: var(--main-color);">
-                            <i class="fa-solid fa-bolt"></i>
-                            -48%
-                        </div>
-                    </div>
-
-                    <div class="card flash-sale__card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <img src="img/flash-sale/oto.jpg" class="card-img-top flash-sale__img" alt="...">
-                        <div class="card-body" style="width: 80%;">
-                            <h4 class="card-title" style="color: #ee4d2d;">
-                                <span style="font-size: 14px;">đ</span>1.129.000
-                            </h4>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    style="width: 15%"></div>
-                            </div>
-                        </div>
-
-                        <img src="img/shopee-mall.png" class="flash-sale__img--mall" alt="">
-
-                        <img src="img/flash-sale/12-12-dong-kiem.png" class="flash-sale__img--12-dongkiem" alt="">
-                        <div class="flash-sale__saleoff" style="color: var(--main-color);">
-                            <i class="fa-solid fa-bolt"></i>
-                            -48%
-                        </div>
-                    </div>
-                    <div class="card flash-sale__card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <img src="img/flash-sale/nuoc-hoa.jpg" class="card-img-top flash-sale__img" alt="...">
-                        <div class="card-body" style="width: 80%;">
-                            <h4 class="card-title" style="color: #ee4d2d;">
-                                <span style="font-size: 14px;">đ</span>179.000
-                            </h4>
-                            <div class="progress" role="progressbar" aria-label="Animated striped example"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                                    style="width: 85%"></div>
-                            </div>
-                        </div>
-
-                        <img src="img/shopee-mall.png" class="flash-sale__img--mall" alt="">
-
-                        <img src="img/flash-sale/12-12-dong-kiem.png" class="flash-sale__img--12-dongkiem" alt="">
-                        <div class="flash-sale__saleoff" style="color: var(--main-color);">
-                            <i class="fa-solid fa-bolt"></i>
-                            -48%
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-            <section class="shopee-mall" id="mall">
-                <div class="shopee-mall__header">
-                    <div class="shopee-mall__header--name">
-                        <h5 style="color: #d0011b;" class="ps-2">SHOPEE MALL</h5>
-
-                    </div>
-
-                    <div class="shopee-mall__header--desc">
-                        <p>
-                            <i class="fa-solid icon fa-rotate-left"></i>
-                            Miễn Phí Trả Hàng
-                        </p>
-
-                        <p>
-                            <i class="fa-solid icon fa-shield-halved"></i>
-                            Chính Hãng 100%
-                        </p>
-
-                        <p>
-                            <i class="fa-solid icon fa-truck-fast"></i>
-                            Miễn Phí Vận Chuyển
-                        </p>
-                    </div>
-                    <a href="#" class="link--xemthem" style="color: #d0011b;">
-                        Xem tất cả
-                        <i class="fa-solid fa-circle-chevron-right"></i>
-                    </a>
-
-                </div>
-
-                <div class="shopee-mall__body">
-
-                    <div id="carouselExampleInterval" class="carousel slide shopee-mall__carousel--mobile"
-                        data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="img/banner5.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src="img/banner6.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/banner7.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-
-                    <div id="carouselExampleRide" class="carousel slide shopee-mall__carousel--PC" data-bs-ride="true">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/shope-mall/xiaomi.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/shope-mall/banner-giangsinh.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/shope-mall/sua-rua-mat.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-
-
-
-                    <div class="shopee-mall__brand">
-                        <a href="#">
-                            <img src="img/shope-mall/unilever.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand">
-                                <img src="img/shope-mall/unilever-logo.png" alt="" class="shope-mall__img--brand">
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Mua là có quà
-                            </p>
-                        </a>
-
-                        <a href="#">
-                            <img src="img/shope-mall/sanpham-deli.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand">
-                                <img src="img/shope-mall/deli-logo.png" alt="" class="shope-mall__img--brand">
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Deli siêu sale
-                            </p>
-                        </a>
-
-                        <a href="#">
-                            <img src="img/shope-mall/omomatic.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand">
-                                <img src="img/shope-mall/unilever-logo.png" alt="" class="shope-mall__img--brand">
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Mua là có quà
-                            </p>
-                        </a>
-
-                        <a href="#">
-                            <img src="img/shope-mall/sanpham-loreal.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand">
-                                <img src="img/shope-mall/loreal-logo.png" alt="" class="shope-mall__img--brand">
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Ưu đãi đến 50%
-                            </p>
-                        </a>
-
-                        <a href="#">
-                            <img src="img/shope-mall/sanpham-lovito.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand">
-                                <img src="img/shope-mall/lovito-logo.png" alt="" class="shope-mall__img--brand">
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Thời trang -50%
-                            </p>
-                        </a>
-
-                        <a href="#">
-                            <img src="img/shope-mall/sanpham-focallure.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand"
-                                style="color: gray; height: 47px; padding-top: 10px; font-size: 14px;">
-                                FOCALLURE
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Giảm đến 50%
-                            </p>
-                        </a>
-
-                        <a href="#">
-                            <img src="img/shope-mall/sanpham-bobby.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand">
-                                <img src="img/shope-mall/boby-logo.png" alt="" class="shope-mall__img--brand">
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Giảm đến 40%
-                            </p>
-                        </a>
-
-                        <a href="#">
-                            <img src="img/shope-mall/sanpham-coolmate.jpg" alt="" class="shopee-mall__img-product">
-                            <div class="shopee-mall__border--brand">
-                                <img src="img/shope-mall/coolmate-logo.png" alt="" class="shope-mall__img--brand">
-                            </div>
-                            <p class="shopee-mall__brand--text">
-                                Mua 1 tặng 1
-                            </p>
-                        </a>
-
-
-                    </div>
-                </div>
-
-            </section>
+          
 
             <section class="dayly-discover">
                 <div class="daily-discover__header--name">
@@ -775,7 +297,7 @@
 
 
                     <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1"
-                        id="daily-discover-card-1" >
+                        id="daily-discover-card-1">
                         <div class="daily-discover--inner-card">
 
                             <img src="img/daily-discover/sanpham13.jpg" class="card-img-top dayly-discover__img"
@@ -905,48 +427,7 @@
                         </a>
                     </div>
 
-                    <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <div class="daily-discover--inner-card">
-                            <img src="img/daily-discover/sanpham3.jpg" class="card-img-top dayly-discover__img"
-                                alt="...">
-                            <div class="card-body daily-discover-card__body">
-                                <p class="dayly-discover-card__title">
-                                    Giày thể thao Nam vải canvas
-                                </p>
-                                <div class="daily-discover__mall-yeuthich">
-
-                                    <p class="yeuthich">
-                                        Yêu Thích
-                                    </p>
-                                </div>
-
-                                <div class="dayly-discover__sale-desc">
-
-                                    <p class="daily-discover__flash-sale">
-                                        <!-- <i class="fa-solid fa-bolt"></i> -->
-                                        Flash Sale
-                                    </p>
-                                </div>
-
-                                <div class="daily-discover-card__price">
-                                    <span style="font-size: 12px;">đ</span>107.000
-                                    <p class="daily-discover-card__sold">
-                                        Đã bán 400
-                                    </p>
-                                </div>
-
-                            </div>
-                            <img src="img/flash-sale/12-12-dong-kiem.png" class="daily-discover-card__img--12-dongkiem"
-                                alt="">
-                            <div class="daily-discover__saleoff" style="color: var(--main-color);">
-                                <i class="fa-solid fa-bolt"></i>
-                                -42%
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-danger dayly-discover__btn">
-                            Thêm vào giỏ hàng
-                        </a>
-                    </div>
+                  
 
                     <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
                         <div class="daily-discover--inner-card">
@@ -1030,47 +511,7 @@
                         </a>
                     </div>
 
-                    <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1"
-                        id="daily-discover-card-2">
-                        <div class="daily-discover--inner-card">
-                            <img src="img/daily-discover/sanpham6.jpg" class="card-img-top dayly-discover__img"
-                                alt="...">
-                            <div class="card-body daily-discover-card__body">
-                                <p class="dayly-discover-card__title">
-                                    Đệm Đa Năng Topper Gấp Gọn dày 5cm
-                                </p>
-                                <div class="daily-discover__mall-yeuthich">
-                                    <p class="yeuthich">
-                                        Yêu Thích
-                                    </p>
-                                </div>
-
-                                <div class="dayly-discover__sale-desc">
-
-                                    <p class="daily-discover__saleoff2">
-                                        Flash Sale
-                                    </p>
-                                </div>
-
-                                <div class="daily-discover-card__price">
-                                    <span style="font-size: 12px;">đ</span>225.000
-                                    <p class="daily-discover-card__sold">
-                                        Đã bán 32,2k
-                                    </p>
-                                </div>
-
-                            </div>
-                            <img src="img/flash-sale/12-12-dong-kiem.png" class="daily-discover-card__img--12-dongkiem"
-                                alt="">
-                            <div class="daily-discover__saleoff" style="color: var(--main-color);">
-                                <i class="fa-solid fa-bolt"></i>
-                                -40%
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-danger dayly-discover__btn">
-                            Thêm vào giỏ hàng
-                        </a>
-                    </div>
+                   
 
                     <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
                         <div class="daily-discover--inner-card">
@@ -1113,47 +554,7 @@
                         </a>
                     </div>
 
-                    <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <div class="daily-discover--inner-card">
-                            <img src="img/daily-discover/sanpham8.jpg" class="card-img-top dayly-discover__img"
-                                alt="...">
-                            <div class="card-body daily-discover-card__body">
-                                <p class="dayly-discover-card__title">
-                                    Áo khoác nam bomber siêu cản gió GNH
-                                </p>
-                                <div class="daily-discover__mall-yeuthich">
-                                    <img src="img/shopee-mall.png" class="dayly-discover__img--mall" alt="">
-
-
-                                </div>
-
-                                <div class="dayly-discover__sale-desc">
-                                    <p class="daily-discover__flash-sale">
-                                        <i class="fa-solid fa-bolt"></i>
-                                        Flash Sale
-                                    </p>
-
-                                </div>
-
-                                <div class="daily-discover-card__price">
-                                    <span style="font-size: 12px;">đ</span>375.000
-                                    <p class="daily-discover-card__sold">
-                                        Đã bán 335
-                                    </p>
-                                </div>
-
-                            </div>
-                            <img src="img/flash-sale/12-12-dong-kiem.png" class="daily-discover-card__img--12-dongkiem"
-                                alt="">
-                            <div class="daily-discover__saleoff" style="color: var(--main-color);">
-                                <i class="fa-solid fa-bolt"></i>
-                                -34%
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-danger dayly-discover__btn">
-                            Thêm vào giỏ hàng
-                        </a>
-                    </div>
+                   
 
                     <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
                         <div class="daily-discover--inner-card">
@@ -1200,46 +601,7 @@
                     </div>
 
 
-                    <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <div class="daily-discover--inner-card">
-                            <img src="img/daily-discover/sanpham10.jpg" class="card-img-top dayly-discover__img"
-                                alt="...">
-                            <div class="card-body daily-discover-card__body">
-                                <p class="dayly-discover-card__title">
-                                    Roksana Ổ cắm điện đa năng 7 Cổng Sạc USB
-                                </p>
-                                <div class="daily-discover__mall-yeuthich">
-                                    <p class="yeuthich">
-                                        Yêu Thích
-                                    </p>
-                                </div>
-
-                                <div class="dayly-discover__sale-desc">
-
-                                    <p class="daily-discover__saleoff2">
-                                        Flash Sale
-                                    </p>
-                                </div>
-
-                                <div class="daily-discover-card__price">
-                                    <span style="font-size: 12px;">đ</span>54.000
-                                    <p class="daily-discover-card__sold">
-                                        Đã bán 35k
-                                    </p>
-                                </div>
-
-                            </div>
-                            <img src="img/flash-sale/12-12-dong-kiem.png" class="daily-discover-card__img--12-dongkiem"
-                                alt="">
-                            <div class="daily-discover__saleoff" style="color: var(--main-color);">
-                                <i class="fa-solid fa-bolt"></i>
-                                -46%
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-danger dayly-discover__btn">
-                            Thêm vào giỏ hàng
-                        </a>
-                    </div>
+                    
 
                     <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
                         <div class="daily-discover--inner-card">
@@ -1683,48 +1045,7 @@
                         </a>
                     </div>
 
-                    <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1">
-                        <div class="daily-discover--inner-card">
-                            <img src="img/daily-discover/sanpham22.jpg" class="card-img-top dayly-discover__img"
-                                alt="...">
-                            <div class="card-body daily-discover-card__body">
-                                <p class="dayly-discover-card__title">
-                                    Cây Thông mini Bằng Nhựa Có Đèn led
-                                </p>
-                                <div class="daily-discover__mall-yeuthich">
-
-                                    <p class="yeuthich">
-                                        Yêu Thích
-                                    </p>
-                                </div>
-
-                                <div class="dayly-discover__sale-desc">
-
-                                    <p class="daily-discover__flash-sale">
-                                        <!-- <i class="fa-solid fa-bolt"></i> -->
-                                        Flash Sale
-                                    </p>
-                                </div>
-
-                                <div class="daily-discover-card__price">
-                                    <span style="font-size: 12px;">đ</span>23.700
-                                    <p class="daily-discover-card__sold">
-                                        Đã bán 130
-                                    </p>
-                                </div>
-
-                            </div>
-                            <img src="img/flash-sale/12-12-dong-kiem.png" class="daily-discover-card__img--12-dongkiem"
-                                alt="">
-                            <div class="daily-discover__saleoff" style="color: var(--main-color);">
-                                <i class="fa-solid fa-bolt"></i>
-                                -46%
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-danger dayly-discover__btn">
-                            Thêm vào giỏ hàng
-                        </a>
-                    </div>
+                   
 
                     <div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1"
                         id="daily-discover-card-1">
@@ -1815,23 +1136,8 @@
                             Thêm vào giỏ hàng
                         </a>
                     </div>
-
-
-
-
                 </div>
-                <!-- <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#daily-discover-card-1">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#daily-discover-card-2">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#daily-discover-card-3">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#daily-discover-card-4">4</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul> -->
+
             </section>
 
             <nav aria-label="Page navigation example">
@@ -2007,131 +1313,7 @@
 
 
     </div>
-
-    <script>
-        //update đồng hồ 
-        function updateClock() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
-
-            // Định dạng giờ để luôn hiển thị hai chữ số
-            hours = hours < 10 ? '0' + hours : hours;
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            var timeString = hours + ':' + minutes + ':' + seconds;
-
-            // cập nhật nội dung của phần tử có id là 'clock'
-            var clock = document.getElementById('clock');
-            clock.innerText = timeString;
-
-        }
-        updateClock();
-        setInterval(updateClock, 1000);
-
-
-        //Slider
-        var sliderArray = [];
-        var sliderCurrentIndex = 0;
-        var bannerTopSlider = document.getElementById('banner-top--slider');
-
-        function loadSlider() {
-            for (let i = 1; i < 8; i++) {
-                sliderArray[i] = new Image();
-                sliderArray[i].src = `img/banner${i}.jpg`;
-
-                // console.log(sliderArray[i]);
-            }
-        }
-
-        setInterval(function () {
-            sliderCurrentIndex++;
-            if (sliderCurrentIndex == 7) {
-                sliderCurrentIndex = 1;
-            }
-            bannerTopSlider.src = sliderArray[sliderCurrentIndex].src
-
-        }, 2000);
-
-
-        //zoom ảnh item khi hover
-
-        var dailyDiscoverCardList = document.getElementsByClassName('dayly-discover-card');
-        Array.from(dailyDiscoverCardList).forEach(function (element) {
-            
-            element.onmouseenter = function () {
-                element.firstElementChild.firstElementChild.classList.add('zoomed')
-            }
-            element.onmouseleave = function () {
-                element.querySelector('.dayly-discover__img').classList.remove('zoomed')
-            }
-            
-        })
-
-        var dailyDiscoverCardBodyList = document.getElementsByClassName('daily-discover-card__body');
-        // console.log(dailyDiscoverImageList);
-        Array.from(dailyDiscoverCardBodyList).forEach(function(element){
-
-            
-            element.addEventListener('click', function (event) {
-                // event.preventDefault();
-                window.location.href = 'detail.html';
-            })
-        })
-
-
-            var flashSaleCardList = document.getElementsByClassName('flash-sale__card');
-            // console.log(flashSaleCardList);
-            Array.from(flashSaleCardList).forEach(function (element) {
-                // console.log(element.firstElementChild);
-                element.addEventListener('mouseenter', function () {
-                    element.querySelector('.flash-sale__img').classList.add('zoomed');
-                })
-                element.addEventListener('mouseleave', function () {
-
-                    element.firstElementChild.classList.remove('zoomed')
-                })
-
-            })
-
-
-            // Cập nhật quantity giỏ hàng ở trang chủ khi ấn nút thêm vào giỏ hàng
-            var dailyDiscoverBtnList = document.getElementsByClassName('dayly-discover__btn');
-            Array.from(dailyDiscoverBtnList).forEach(function (element) {
-
-                element.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    var iconCart = document.getElementById('header__icon--cart--quantity');
-                    var quantityInCart = parseInt(iconCart.innerText);
-                    quantityInCart += 1;
-                    iconCart.innerText = quantityInCart;
-                });
-
-                //Hiển thị thông báo Add To Cart thành công
-                element.addEventListener('click', function () {
-                    var messageAddToCartElement = document.querySelector('.add-cart--success');
-                    var status = messageAddToCartElement.style.display;
-                    if (status === 'block') {
-                        messageAddToCartElement.style.display = 'none';
-
-                    } else {
-                        messageAddToCartElement.style.display = 'block';
-                        setTimeout(function () {
-                            messageAddToCartElement.style.display = 'none';
-                        }, 500)
-                    }
-                })
-
-
-
-            })
-
-        
-
-    </script>
-
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -108,6 +108,9 @@ a {
 
 .banner-top {
     padding-top: 74px;
+    position: relative;
+    display: flex;
+    gap: 5px;
 }
 
 
@@ -145,7 +148,7 @@ a {
     padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1px solid var(--main-color);
+    
 }
 
 .page-menu__item {
@@ -178,164 +181,6 @@ a {
 
 .page-menu i {
     color: var(--main-color);
-}
-
-.category {
-    display: none;
-    /* border-top: 1px solid var(--main-color); */
-}
-.carousel{
-    cursor: pointer;
-}
-
-
-
-.flash-sale {
-    padding: 20px 0;
-}
-
-.flash-sale__header {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-
-.flash-sale__product {
-    display: flex;
-    flex-wrap: wrap;
-    /* overflow: hidden; */
-}
-
-.flash-sale__card {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    text-align: center;
-    position: relative;
-    border: none;
-}
-.flash-sale__card h4{
-    font-size: 16px;
-}
-
-.flash-sale__img {
-    width: 80%;
-}
-
-.flash-sale__img--mall {
-    width: 30px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-}
-
-.flash-sale__img--12-dongkiem {
-    width: 80%;
-    position: absolute;
-    top: 0%;
-}
-
-.flash-sale__saleoff {
-    color: var(--main-color);
-    background-color: #ffe97a;
-    position: absolute;
-    top: 0;
-    right: 15px;
-    font-size: 14px;
-}
-
-.link--xemthem {
-    color: var(--main-color);
-    position: absolute;
-    right: 5%;
-    top: 25%;
-    transform: translateY(-50%);
-}
-
-.shopee-mall {
-    border-top: 1px solid var(--shopee-mall-color);
-}
-
-.shopee-mall__header {
-    position: relative;
-    width: 100%;
-}
-
-
-.shopee-mall__header--name {
-    border-bottom: 1px solid rgb(240, 237, 237);
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.shopee-mall-header p {
-    display: none;
-}
-
-.shopee-mall__header--desc {
-    display: flex;
-    font-size: 12px;
-    justify-content: space-around;
-}
-
-.shopee-mall__header--desc i {
-    color: var(--shopee-mall-color);
-}
-
-
-.shopee-mall__body {
-    display: flex;
-    flex-direction: column;
-}
-
-.shopee-mall__brand {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.shopee-mall__brand a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 25%;
-    flex-wrap: wrap;
-}
-
-.shopee-mall__img-product {
-    width: 80%;
-    margin: auto;
-    padding: 8px;
-}
-.shopee-mall__img-product:hover{
-    transform: scale(1.01);
-}
-
-.shopee-mall__border--brand {
-    border: 1px solid gray;
-    border-radius: 20px;
-    width: 80%;
-    text-align: center;
-    padding: 2px;
-}
-
-.shopee-mall__carousel--PC {
-    display: none;
-}
-
-.shope-mall__img--brand {
-    height: 40px;
-}
-
-.shopee-mall__brand--text {
-    color: var(--shopee-mall-color);
-    font-weight: bold;
-    font-size: 13px;
-    text-align: center;
-    padding: 4px 0;
 }
 
 .dayly-discover {
@@ -520,31 +365,66 @@ a {
     color: var(--main-color);
 
 }
+#banner-top--iconBack:hover, #banner-top--iconNext:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
 
 footer {
     display: none;
 }
+@media screen and (max-width: 768px) {
+    #banner-top--iconBack{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        color: #9c9999;
+        transform: translateY(50%);
+    }
+    #banner-top--iconNext{
+        position: absolute;
+        top: 50%;
+        color: #9c9999;
+        right: 30px;
+        transform: translateY(50%);
+    }
+}
 
 @media screen and (max-width: 430px) {
-    .shopee-mall__brand a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 33.33%;
-        flex-wrap: wrap;
+    #banner-top--iconBack{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        color: #9c9999;
+        transform: translateY(-50%);
+    }
+    #banner-top--iconNext{
+        position: absolute;
+        top: 50%;
+        color: #9c9999;
+        right: 30px;
+        transform: translateY(-50%);
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 995px) {
-
-    body {
-        /* background: url(img/backgroundLogin2.gif); */
-        background-size: cover;
+    #banner-top--iconBack{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        color: #9c9999;
+        transform: translateY(50%);
     }
-    
+    #banner-top--iconNext{
+        position: absolute;
+        top: 50%;
+        color: #9c9999;
+        right: 30px;
+        transform: translateY(50%);
+    }
    
-
     .container {
         background-color: rgb(255, 255, 255, 0.7);
     }
@@ -661,46 +541,6 @@ footer {
         padding: 2px;
         font-size: 12px;
     }
-
-    .shopee-mall__header {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    .shopee-mall__header--desc {
-        font-size: 15px;
-        padding-top: 16px;
-    }
-
-    .shopee-mall__header--desc p {
-        padding: 0 5px;
-    }
-
-    .header__link a {
-        color: var(--main-color);
-        padding: 0 4px;
-
-    }
-
-    .shopee-mall__body {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .shopee-mall__carousel--mobile {
-        display: none;
-    }
-
-    .shopee-mall__carousel--PC {
-        display: block;
-        width: 33.33%;
-    }
-
-    .shopee-mall__brand {
-        width: 66.66%;
-    }
-
     .QR-mobile {
         display: none;
     }
@@ -709,53 +549,9 @@ footer {
         display: none
     }
 
-    .category {
-        display: block;
-        margin-bottom: 20px;
-        background-color: rgb(255, 255, 255, 0);
-
-
-    }
-
-    .category__list {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .category__link {
-        width: 10%;
-        text-align: center;
-        border: 1px solid rgb(203, 199, 199);
-        color: black;
-        font-size: 14px;
-        padding-top: 14px;
-        padding-bottom: 0;
-    }
-
-    .category__link img {
-        margin-top: 10px;
-        width: 70%;
-        border-radius: 50%;
-        overflow: hidden;
-        transition: all 0.2s ease;
-    }
-
-    .category__link img:hover {
-        transform: scale(1.03);
-        opacity: 1;
-    }
-
-    .category__link p {
-        padding: 6px;
-        /* border: 1px solid red; */
-        margin-top: 10px;
-       
-    }
-
     .banner-top {
         display: flex;
         gap: 3px;
-
     }
 
     .page-menu a {
@@ -766,36 +562,38 @@ footer {
         text-align: center;
     }
 
-    .shopee-mall__header {
-        display: flex;
-
-
-    }
-
-    .link--xemthem {
-        color: var(--main-color);
-        position: absolute;
-        right: 5%;
-        top: 45%;
-        transform: translateY(-50%);
-    }
-
-    
-
     .banner-top--PC {
         width: 33.33%;
         display: flex;
         flex-direction: column;
-        /* justify-content: space-between; */
         gap: 3px;
-
     }
     #banner-top--slider {
-        max-width: 66.66%;
+        /* width: 99%; */
+        max-width: 99%;
     }
     .banner-top--PC img{
         height: 50%;
 
+    }
+    #banner-top-sliderOuter{
+        position: relative;
+        margin-left: -5px; 
+    }
+
+    #banner-top--iconBack{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        color: #9c9999;
+        transform: translateY(-50%);
+    }
+    #banner-top--iconNext{
+        position: absolute;
+        top: 50%;
+        color: #9c9999;
+        right: 30px;
+        transform: translateY(-50%);
     }
 
     .daily-discover__header--name {
@@ -870,15 +668,6 @@ footer {
         width: 840px;
         height: 40px;
     }
-
-    .link--xemthem {
-        color: var(--main-color);
-        position: absolute;
-        right: 5%;
-        top: 45%;
-        transform: translateY(-50%);
-    }
-
 }
 
 @media screen and (min-width: 1400px) {
@@ -886,13 +675,5 @@ footer {
         position: relative;
         width: 940px;
         height: 40px;
-    }
-
-    .link--xemthem {
-        color: var(--main-color);
-        position: absolute;
-        right: 5%;
-        top: 45%;
-        transform: translateY(-50%);
     }
 }

@@ -988,7 +988,7 @@ footer {
 
 
     #detail-body {
-        /* border: 1px solid red; */
+        margin-bottom: 90px;
     }
 
     .detail-body_item {

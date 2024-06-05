@@ -5,6 +5,8 @@ var iconCart = document.getElementById('header__icon--cart');
 var cartElement = document.querySelector('.cart')
 var cartCloseElement = document.querySelector('.cart-close');
 var pageElement = document.querySelector('.row');
+var formPaymentElement = cartElement.querySelector('#form-payment')
+var btnPay = document.querySelector('#btnPay');
 
 iconCart.onclick = () => {
     cartElement.classList.add('open')
@@ -16,13 +18,13 @@ iconCart.onclick = () => {
     var cartItemElements = document.querySelectorAll('.cart-item');
 
     Array.from(cartItemElements).forEach((element) => {
-
         var deleteBtn = element.querySelector('.cart__trash');
         var plusBtn = element.querySelector('.cart-plus')
         var minusBtn = element.querySelector('.cart-minus')
         var quantityInput = element.querySelector('.cart-quantity')
         var itemTotalElement = element.querySelector('.cart-item-total');
-        console.log(itemTotalElement)
+
+
 
         var productID = Number(element.id.substring(10))
         deleteBtn.onclick = () => {
@@ -33,18 +35,17 @@ iconCart.onclick = () => {
             updateItemTotal(itemTotalElement, productID)
             handlePlusCartItem(quantityInput, productID)
             updateTotal()
-
-
         }
         minusBtn.onclick = () => {
             updateItemTotal(itemTotalElement, productID)
             handleMinusCartItem(cartTableElement, element, quantityInput, productID)
             updateTotal()
         }
+
+
     })
-
-
 }
+
 
 // Tính tổng tiền toàn bộ sản phẩm trong cart
 function updateTotal() {
@@ -57,15 +58,49 @@ function updateTotal() {
 
     var cartBillElement = document.querySelector('#cart-bill');
 
+
     cartBillElement.querySelector('#cart-total-products').innerText = totalProducts.toLocaleString('de-DE')
     cartBillElement.querySelector('#cart-VAT').innerText = VAT.toLocaleString('de-DE')
     cartBillElement.querySelector('#cart-total-bill').innerText = totalBill.toLocaleString('de-DE')
+
+    var btnSubmitOrder = cartElement.querySelector('#btnSubmitOrder');
+    btnPay.onclick = () => {
+        btnPay.style.display = 'none'
+        formPaymentElement.style.display = 'block';
+
+
+    }
+    btnSubmitOrder.onclick = () => {
+        setTimeout(() => {
+            handleCreateOrder(totalProducts, VAT, totalBill)
+        }, 300)
+       
+
+    }
 }
+
+function handleCreateOrder(totalProducts, VAT, totalBill) {
+    var now = new Date();
+    var createdTime = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`
+    var newOrder = {
+        cart,
+        totalProducts,
+        VAT,
+        totalBill,
+        createdTime
+    }
+    console.log(newOrder)
+    // cartElement.classList.remove('open')
+    
+}
+
+
+
 // Tính total của item cần update
 function updateItemTotal(itemTotalElement, productID) {
     var item = cart.find((cartItem) => cartItem.id === productID)
     if (item.getQuantityInCart() > 0) {
-        itemTotalElement.innerText = (item.getQuantityInCart() * item.price).toLocaleString('de-DE')
+        itemTotalElement.innerText = ((item.getQuantityInCart() + 1) * item.price).toLocaleString('de-DE')
     }
 }
 
@@ -83,10 +118,7 @@ function handleMinusCartItem(cartTableElement, element, quantityInput, productID
         handleRemoveCartItem(cartTableElement, element, productID)
     } else {
         quantityInput.value = item.getQuantityInCart()
-
     }
-
-
 }
 
 function handleRemoveCartItem(cartTableElement, element, productID) {
@@ -97,12 +129,12 @@ function handleRemoveCartItem(cartTableElement, element, productID) {
     updateTotal()
     setQuantityInCart()
     if (cart.length === 0) {
-        updateEmptyStatusInCart()
+        updateStatusInCart()
     }
 }
 
 cartCloseElement.onclick = () => {
-    cartElement.classList.remove('open')
+    cartElement.classList.remove('open');
 
 }
 
@@ -121,7 +153,6 @@ var bannerTopIconNext = document.getElementById('banner-top--iconNext');
 var bannerTopIconBack = document.getElementById('banner-top--iconBack');
 
 bannerTopIconNext.onclick = () => {
-
     if (sliderCurrentIndex < sliderArray.length - 1) {
         sliderCurrentIndex += 1;
 
@@ -148,7 +179,6 @@ setInterval(() => {
         sliderCurrentIndex = 1;
     }
     bannerTopSlider.src = sliderArray[sliderCurrentIndex]
-
 }, 2000);
 
 
@@ -290,7 +320,7 @@ var products = [
         inFlashSale: true,
         img: 'img/daily-discover/sanpham21.jpg'
     },
-    
+
     {
         id: 16,
         name: 'Áo khoác chống nắng cho Nam',
@@ -309,41 +339,38 @@ function handleRenderProducts() {
     var htmls = productsElement.innerHTML;
 
     products.forEach((product) => {
-        htmls += `<div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1"
-                    id="card${product.id}">
-                <div class="daily-discover--inner-card">
+        htmls += `<div class="card dayly-discover-card col-6 col-sm-6 col-xl-2 col-md-4 col-lg-3 pb-4 mt-1"   id="card${product.id}">
+                 
+                        <div class="daily-discover--inner-card">
+                            <img src=${product.img} class="card-img-top dayly-discover__img" alt="...">
 
-                    <img src=${product.img} class="card-img-top dayly-discover__img" alt="...">
+                            <div class="card-body daily-discover-card__body">
+                                  <p class="dayly-discover-card__title">
+                                    ${product.name}
+                                  </p>
+                                  <div class="dayly-discover__sale-desc">
+                                        <p class="daily-discover__flash-sale">
+                                            <i class="fa-solid fa-bolt"></i>
+                                            Flash Sale 
+                                        </p>
+                                        <p class="daily-discover__saleoff2">
+                                            Giảm ${product.sale}%
+                                        </p>
+                                  </div>
 
-                    <div class="card-body daily-discover-card__body">
-                        <p class="dayly-discover-card__title">
-                            ${product.name}
-                         </p>
-          
-
-                    <div class="dayly-discover__sale-desc">
-                        <p class="daily-discover__flash-sale">
-                            <i class="fa-solid fa-bolt"></i>
-                            Flash Sale 
-                        </p>
-                        <p class="daily-discover__saleoff2">
-                            Giảm ${product.sale}%
-                        </p>
-                    </div>
-
-                    <div class="daily-discover-card__price">
-                        <span style="font-size: 12px;">đ</span>${product.price.toLocaleString('de-DE')}
-                        <p class="daily-discover-card__sold">
-                            Đã bán ${product.sold}
-                        </p>
-                    </div>
-
-                </div>
-                 </div>
-                <button class="btn btn-danger dayly-discover__btn">
-                    Thêm vào giỏ hàng
-                </button>
-             </div>`
+                                  <div class="daily-discover-card__price">
+                                        <span style="font-size: 12px;">đ</span>${product.price.toLocaleString('de-DE')}
+                                        <p class="daily-discover-card__sold">
+                                             Đã bán ${product.sold}
+                                        </p>
+                                  </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-danger dayly-discover__btn">
+                            Thêm vào giỏ hàng
+                        </button>
+                 </div>`
 
     })
 
@@ -355,19 +382,13 @@ function handleRenderProducts() {
         if (!product.inFlashSale) {
             flashSaleElement.style.display = 'none'
         }
-
     })
 
 }
 handleRenderProducts()
 
-
-
-
 // zoom ảnh item khi hover
-
 var dailyDiscoverCardList = document.getElementsByClassName('dayly-discover-card');
-
 Array.from(dailyDiscoverCardList).forEach((element) => {
     element.onmouseenter = () => {
         element.querySelector('.dayly-discover__img').classList.add('zoomed')
@@ -378,18 +399,21 @@ Array.from(dailyDiscoverCardList).forEach((element) => {
 })
 
 var dailyDiscoverCardBodyList = document.getElementsByClassName('daily-discover-card__body');
-// console.log(dailyDiscoverImageList);
 Array.from(dailyDiscoverCardBodyList).forEach((element) => {
     element.addEventListener('click', (event) => {
-        // event.preventDefault();
         window.location.href = 'detail.html';
     })
 })
 
-
-
-
-
+function messageSuccess(message) {
+    var element = document.querySelector('.message-success');
+    element.style.display = 'flex';
+    var messageElement = element.querySelector('#message-success-content');
+    messageElement.innerText = message;
+    setTimeout(() => {
+        element.style.display = 'none';
+    }, 1200)
+}
 
 
 // Cập nhật quantity giỏ hàng ở trang chủ khi ấn nút thêm vào giỏ hàng
@@ -398,24 +422,9 @@ var cart = [];
 var dailyDiscoverBtnList = document.getElementsByClassName('dayly-discover__btn');
 Array.from(dailyDiscoverBtnList).forEach((element) => {
     // Thêm item vào giỏ hàng
-
-
-
-
-
     element.addEventListener('click', () => {
         // Hiển thị thông báo Add To Cart thành công
-        var messageAddToCartElement = document.querySelector('.add-cart--success');
-        var status = messageAddToCartElement.style.display;
-        if (status === 'block') {
-            messageAddToCartElement.style.display = 'none';
-
-        } else {
-            messageAddToCartElement.style.display = 'flex';
-            setTimeout(() => {
-                messageAddToCartElement.style.display = 'none';
-            }, 500)
-        }
+        messageSuccess('Đã thêm sản phẩm vào giỏ hàng')
     })
     element.addEventListener('click', () => {
 
@@ -452,18 +461,12 @@ Array.from(dailyDiscoverBtnList).forEach((element) => {
             var existedCartItem = cart.find((cartItem) => cartItem.id === selectedID)
             existedCartItem.quantityInCart = existedCartItem.getQuantityInCart() + 1;
         }
-
-
-
     })
 
     // Tăng số lượng trong span của icon giỏ hàng
     element.addEventListener('click', (event) => {
         setQuantityInCart()
-
     });
-
-
 })
 
 function setQuantityInCart() {
@@ -474,29 +477,27 @@ function setQuantityInCart() {
 
 // Hiển thị table cart
 var mainCartElement = cartElement.querySelector('.main-cart');
-function updateEmptyStatusInCart() {
+function updateStatusInCart() {
     var cartMessageElement = cartElement.querySelector('#cart-message--empty')
-    var btnPay = cartElement.querySelector('#btnPay');
+
+    formPaymentElement.style.display = 'none'
+
     if (cart.length > 0) {
         mainCartElement.style.display = 'flex';
         cartMessageElement.style.display = 'none'
-
     } else {
         mainCartElement.style.display = 'none';
         cartMessageElement.style.display = 'flex'
-
     }
 
 }
 function handleRenderCart() {
-
     var cartElement = document.querySelector('.cart')
     var cartTableBodyElement = cartElement.querySelector('#cart-table-body')
-
+    btnPay.style.display = 'block'
 
     if (cart.length > 0) {
-        updateEmptyStatusInCart()
-
+        updateStatusInCart()
         var htmls = ''
         cart.forEach((cartItem) => {
 
@@ -505,35 +506,37 @@ function handleRenderCart() {
                             <td>
                                 <img src=${cartItem.img} class="cartItem-image" alt="" width="80">
                             </td>
-                            <td style="padding-top: 30px; max-width: 180px; text-align: left; ">
-                                <p class="h6" style="" >${cartItem.name}</p>
+                            <td style="padding-top: 30px; text-align: left; ">
+                                <p class="h5" style="" >${cartItem.name}</p>
                                 <p style="color: orange">
-                                    
                                     <strong>đ${cartItem.price.toLocaleString('de-DE')}</strong>
                                 </p>
-
                                 <br>
-                                
-
                             </td>
-                            <td><i class="fa-solid cart__trash fa-2x fa-trash-can"></i></td>
                             <td>
-                                <button type="button" class="btn btn-outline-secondary cart-plus" style="font-size: 10px;">
+                                <i class="fa-solid cart__trash fa-2x fa-trash-can"></i>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-secondary cart-plus" style="font-size: 12px;">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
                                 <input class="btn cart-quantity btn-outline-secondary" type="submit" value=${cartItem.quantityInCart}
-                                    style="font-size: 10px;">
-                                <button type="button" class="btn btn-outline-secondary cart-minus" style="font-size: 10px;">
+                                    style="font-size: 12px; font-weight="bold">
+                                <button type="button" class="btn btn-outline-secondary cart-minus" style="font-size: 12px;">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
                             </td>
                             <td style="color: var(--shopee-mall-color); font-weight: bold";>-${cartItem.sale}%</td>
-                            <td style = "color: var(--main-color); text-align: center" ><strong>đ<span class="cart-item-total">${total.toLocaleString('de-DE')}</span></strong></td>
+                            <td style = "color: var(--main-color); text-align: center" >
+                                <strong>
+                                     đ<span class="cart-item-total">${total.toLocaleString('de-DE')}</span> 
+                                </strong>
+                            </td>
                      </tr>`
         })
         cartTableBodyElement.innerHTML = htmls;
     } else {
-        updateEmptyStatusInCart()
+        updateStatusInCart()
     }
 
 

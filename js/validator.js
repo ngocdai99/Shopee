@@ -1,3 +1,4 @@
+// import { isCreditCard } from "validator";
 
 function Validator(options) {
     var formElement = document.querySelector(options.form);
@@ -152,6 +153,18 @@ confirmed = (selector, getConfirmValue) => {
                 return 'Vui lòng nhập trường này'
             }
             return value === getConfirmValue() ? undefined : 'Giá trị nhập vào không chính xác'
+        }
+    }
+}
+isCreditCard = (selector) => {
+    return {
+        selector,
+        test(value) {
+            if (value === '') {
+                return 'Vui lòng nhập trường này'
+            }
+            
+            return value.length === 12 ? undefined : `Mã số thẻ ngân hàng phải là 12 ký tự`
         }
     }
 }

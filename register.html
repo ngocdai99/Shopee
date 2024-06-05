@@ -22,26 +22,26 @@
 
             <div class="form-group">
                 <label for="fullname" class="form-label">Tên đầy đủ</label>
-                <input id="fullname" name="fullname" type="text" placeholder="VD:Ngoc Dai" value="NgocDai" class="form-control">
+                <input id="fullname" name="fullname" type="text" placeholder="VD:Ngoc Dai" class="form-control">
                 <span class="form-message"></span>
             </div>
 
-           <div class="form-group">
+            <div class="form-group">
                 <label for="phonenumber" class="form-label">Số điện thoại</label>
-                <input id="phonenumber" name="phonenumber" type="text" class="form-control" value="0868441273"
+                <input id="phonenumber" name="phonenumber" type="text" class="form-control"
                     placeholder="VD: 0918453274">
                 <span class="form-message"></span>
-            </div> 
+            </div>
 
-          <div class="form-group">
+            <div class="form-group">
                 <label for="password" class="form-label">Mật khẩu</label>
-                <input id="password" name="password" type="text" placeholder="Nhập mật khẩu" class="form-control" value="123456">
+                <input id="password" name="password" type="text" placeholder="Nhập mật khẩu" class="form-control">
                 <span class="form-message"></span>
             </div>
 
-          <div class="form-group">
+            <div class="form-group">
                 <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
-                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" value="123456"
+                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu"
                     type="text" class="form-control">
                 <span class="form-message"></span>
             </div>
@@ -61,13 +61,13 @@
                     <option value="hcm">TP.HCM</option>
                 </select>
                 <span class="form-message"></span>
-            </div> 
+            </div>
 
             <div class="form-group">
                 <label class="form-label">Giới tính</label>
                 <div class="controls">
                     <div class="control">
-                        <input id="male" type="radio" name="gender" checked value="male">
+                        <input id="male" type="radio" name="gender" value="male">
                         <label for="male">Nam</label>
                     </div>
                     <div class="control">
@@ -80,13 +80,13 @@
                     </div>
                 </div>
                 <div class="form-message"></div>
-            </div> 
+            </div>
 
             <div class="form-group">
                 <label class="form-label">Bạn biết Shopee từ đâu?</label>
                 <div class="controls">
                     <div class="control">
-                        <input id='Facebook' type="checkbox" checked name="media" value="Facebook">
+                        <input id='Facebook' type="checkbox" name="media" value="Facebook">
                         <label for="Facebook">Facebook</label>
                     </div>
                     <div class="control">
@@ -115,7 +115,7 @@
     </div>
     <script>
 
-        Validator({
+        var registerForm = new Validator({
             form: '#form-1',
             rules: [
                 isRequired('#fullname'),
@@ -129,6 +129,10 @@
                 isRequired('#avatar'),
             ]
         })
+
+        registerForm.onSubmit = (formData) => {
+            console.log(formData)
+        }
     </script>
 
 </body>
